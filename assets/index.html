@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Crystal Game</title>
+</head>
+<body>
+
+<!-- crystal images -->
+	<img src="images/1.png" alt="crystal1" class="crystal-img">
+	<img src="images/2.png" alt="crystal2" class="crystal-img">
+	<img src="images/3.png" alt="crystal3" class="crystal-img">
+	<img src="images/4.png" alt="crystal4" class="crystal-img">
+
+<!-- jquery Library -->
+<script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+
+// create a counter to keep track of the users total
+var counter = 0;
+$(".crystal-img").on("click", function () {
+
+// each time the user clicks the crystal the counter goes up by 1.
+	counter += 10;
+
+	// we then output the new counter value each time the crystal is clicked.
+	alert("Your new score is: " + counter);
+
+});
+
+</script>
+</body>
+</html>
