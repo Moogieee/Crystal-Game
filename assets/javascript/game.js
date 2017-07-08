@@ -22,34 +22,25 @@ var wins = 0;
 var losses = 0;
 
 // function to reset the game
-function newGame() {
-	targetNumber = Math.floor(Math.random() * 101 + 50);
-	numberOptions = [Math.floor(Math.random() * 14 + 2), 
-Math.floor(Math.random() * 14 + 2), 
-Math.floor(Math.random() * 14 + 2), 
-Math.floor(Math.random() * 14 + 2)];
-}
-
-
 
 // create a for loop to create crystals for every numberOption
 for (var i = 0; i < numberOptions.length; i++) {
 
-// for each iteration, we will create an imageCrystal
-var imageCrystal = $("<img>");
+	// for each iteration, we will create an imageCrystal
+	var imageCrystal = $("<img>");
 
-//give the class ".crystal-img" to each crystal so that it can be CSSd
-imageCrystal.addClass("crystal-image");
+	//give the class ".crystal-img" to each crystal so that it can be CSSd
+	imageCrystal.addClass("crystal-image");
 
-// each imageCrystal will be given a src link to the crystal image
-imageCrystal.attr("src", "assets/images/1.png");
+	// each imageCrystal will be given a src link to the crystal image
+	imageCrystal.attr("src", "assets/images/1.png");
 
-// each imageCrystasl will be given a data attribute called data-crystalValue.
-// This data attribute will be set equal to the array value
-imageCrystal.attr("data-crystalvalue", numberOptions[i]);
+	// each imageCrystasl will be given a data attribute called data-crystalValue.
+	// This data attribute will be set equal to the array value
+	imageCrystal.attr("data-crystalvalue", numberOptions[i]);
 
-// each crystal image (with all its classes and attributes) will get added to the page.
-$("#crystals").append(imageCrystal);
+	// each crystal image (with all its classes and attributes) will get added to the page.
+	$("#crystals").append(imageCrystal);
 }
 
 // this time, our click event applied to every single crystal on the page. Not just one.
@@ -75,7 +66,7 @@ $(".crystal-image").on("click", function () {
 		counter = 0; //resets counters to 0
 		wins++; //adds a win each time user wins
 		$("#wins").text("Wins: " + wins); //is it weird I put this here? I tried putting it under var win but the counter is set to 0 and won't increment. same with var losses
-		newGame();
+		// newGame();
 	}
 
 // if counter goes over the targetNumber then user loses, the counter resets back to 0, losses counter goes up 1 and is displayed, crystals get new value and there is new number to guess
@@ -84,7 +75,7 @@ $(".crystal-image").on("click", function () {
 		counter = 0; //resets counter to 0
 		losses++; //adds a loss each time user loses
 		$("#losses").text("Losses: " + losses);
-		newGame();
+		// newGame();
 	}
 
 });
