@@ -1,8 +1,35 @@
+body {
+	color: white;
+}
+
 .crystal-image {
 	margin-right: 10px;
 	margin-top: 10px;
 }
 
 #crystal1, #crystal2, #crystal3, #crystal4 {
-	border: 5px solid black;
+	height: 100px;
+	width: 100px;
 }
+
+#crystals {
+	margin: auto;
+	max-width: 50%;
+}
+#w-l-notif, #crystalValue{
+	color: red;
+}
+#counters {
+	margin: auto;
+	max-width: 50%;
+}
+
+#number-to-guess {
+	font-size: 	25px;
+	color: red;
+}
+
+ul {
+	list-style-type: none: 	;
+}
+
