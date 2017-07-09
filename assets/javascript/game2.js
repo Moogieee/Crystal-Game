@@ -1,3 +1,5 @@
+
+
 // create a counter to keep track of the users total
 var counter = 0;
 var wins = 0;
@@ -23,6 +25,13 @@ function reset () {
 	$("#crystalValue").empty();
 	counter = 0;
 
+	// each imageCrystal will be given a data attribute called data-crystalValue.
+	// This data attribute will be set equal to the Math.random value
+	$("#crystal1").attr("data-crystalvalue", crystal1);
+	$("#crystal2").attr("data-crystalvalue", crystal2);
+	$("#crystal3").attr("data-crystalvalue", crystal3);
+	$("#crystal4").attr("data-crystalvalue", crystal4);
+	
 	// changes targetNumber value on page
 	$("#number-to-guess").html(targetNumber)
 }
