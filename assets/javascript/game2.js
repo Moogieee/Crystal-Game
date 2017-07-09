@@ -1,3 +1,8 @@
+// create a counter to keep track of the users total
+var counter = 0;
+var wins = 0;
+var losses = 0;
+
 var targetNumber = 0;
 var crystal1 = 0;
 var crystal2 = 0;
@@ -42,10 +47,7 @@ console.log(crystal3);
 crystal4 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal4);
 
-// create a counter to keep track of the users total
-var counter = 0;
-var wins = 0;
-var losses = 0;
+
 
 
 //give the class ".crystal-img" to each crystal so that it can be CSSd
