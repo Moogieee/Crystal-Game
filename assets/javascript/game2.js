@@ -46,7 +46,11 @@ targetNumber = Math.floor(Math.random() * 102 + 19);
 // set the number-to-guess header to match the targetNumber
 // eventually this will allow us to change the HTML to match the value in JavaScript.
 $("#number-to-guess").html(targetNumber);
+//give the class ".crystal-img" to each crystal so that it can be CSSd
+$("#crystal1, #crystal2, #crystal3, #crystal4").addClass("crystal-image");
 
+reset();
+/*	
 // give each crystal a random # from 1-12
 crystal1 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal1);
@@ -59,17 +63,13 @@ console.log(crystal4);
 
 $("#crystalValue").text('0');
 	
-//give the class ".crystal-img" to each crystal so that it can be CSSd
-	$("#crystal1, #crystal2, #crystal3, #crystal4").addClass("crystal-image");
-
-
 // each imageCrystal will be given a data attribute called data-crystalValue.
 // This data attribute will be set equal to the Math.random value
 	$("#crystal1").attr("data-crystalvalue", crystal1);
 	$("#crystal2").attr("data-crystalvalue", crystal2);
 	$("#crystal3").attr("data-crystalvalue", crystal3);
 	$("#crystal4").attr("data-crystalvalue", crystal4);
-
+*/
 // each crystal image (with all its classes and attributes) will get added to the page.
 	$("#crystal1").append(crystal1);
 	$("#crystal2").append(crystal2);
