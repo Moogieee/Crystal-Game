@@ -4,6 +4,25 @@ var crystal2 = 0;
 var crystal3 = 0;
 var crystal4 = 0;
 
+
+// function to reset the game
+function reset () {
+	alert('reset');
+	targetNumber = Math.floor(Math.random() * 102 + 19);
+	console.log("targetNumber = " + targetNumber);
+ 	crystal1 = Math.floor(Math.random() * 12 + 1);
+	console.log(crystal1);
+	crystal2 = Math.floor(Math.random() * 12 + 1);
+	crystal3 = Math.floor(Math.random() * 12 + 1);
+	crystal4 = Math.floor(Math.random() * 12 + 1);
+	$("#crystalValue").empty();
+	counter = 0;
+
+	// changes targetNumber value on page
+	$("#number-to-guess").html(targetNumber)
+}
+
+
 $(document).ready(function() {
 
 // set the targetNumber from 19-120
@@ -28,21 +47,7 @@ var counter = 0;
 var wins = 0;
 var losses = 0;
 
-// function to reset the game
-function reset () {
-	targetNumber = Math.floor(Math.random() * 102 + 19);
-	console.log("targetNumber = " + targetNumber);
- 	crystal1 = Math.floor(Math.random() * 12 + 1);
-	console.log(crystal1);
-	crystal2 = Math.floor(Math.random() * 12 + 1);
-	crystal3 = Math.floor(Math.random() * 12 + 1);
-	crystal4 = Math.floor(Math.random() * 12 + 1);
-	$("#crystalValue").empty();
-	counter = 0;
 
-	// changes targetNumber value on page
-	$("#number-to-guess").html(targetNumber)
-}
 //give the class ".crystal-img" to each crystal so that it can be CSSd
 	$("#crystal1, #crystal2, #crystal3, #crystal4").addClass("crystal-image");
 
@@ -79,18 +84,20 @@ $("#crystal1, #crystal2, #crystal3, #crystal4").on("click", function () {
 
 // if counter is equal to targetNumber then user wins, the counter resets back to 0, // win counter goes up 1 and is displayed, crystals get new value and there is new number to guess
 	if (counter === targetNumber) {
+		reset();
 		$("#w-l-notif").text("You Win!");
 		wins++;
 		$("#wins").text("Wins: " + wins); //is it weird I put this here? I tried putting it under var win but the counter is set to 0 and won't increment. same with var losses
-		reset();
+		
 	}
 
 // if counter goes over the targetNumber then user loses, the counter resets back to 0, losses counter goes up 1 and is displayed, crystals get new value and there is new number to guess
 	else if (counter >= targetNumber) {
+		reset();
 		$("#w-l-notif").text("You Lose!");
 		losses++;
 		$("#losses").text("Losses: " + losses);
-		reset();
+		
 	}
 
 });
