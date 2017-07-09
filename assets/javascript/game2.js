@@ -1,20 +1,26 @@
+var targetNumber = 0;
+var crystal1 = 0;
+var crystal2 = 0;
+var crystal3 = 0;
+var crystal4 = 0;
+
 $(document).ready(function() {
 
 // set the targetNumber from 19-120
-var targetNumber = Math.floor(Math.random() * 102 + 19);
+targetNumber = Math.floor(Math.random() * 102 + 19);
 
 // set the number-to-guess header to match the targetNumber
 // eventually this will allow us to change the HTML to match the value in JavaScript.
 $("#number-to-guess").html(targetNumber);
 
 // give each crystal a random # from 1-12
-var crystal1 = Math.floor(Math.random() * 12 + 1);
+crystal1 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal1);
-var crystal2 = Math.floor(Math.random() * 12 + 1);
+crystal2 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal2);
-var crystal3 = Math.floor(Math.random() * 12 + 1);
+crystal3 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal3);
-var crystal4 = Math.floor(Math.random() * 12 + 1);
+crystal4 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal4);
 
 // create a counter to keep track of the users total
@@ -26,11 +32,11 @@ var losses = 0;
 function reset () {
 	targetNumber = Math.floor(Math.random() * 102 + 19);
 	console.log("targetNumber = " + targetNumber);
-	var crystal1 = Math.floor(Math.random() * 12 + 1);
+ 	crystal1 = Math.floor(Math.random() * 12 + 1);
 	console.log(crystal1);
-	var crystal2 = Math.floor(Math.random() * 12 + 1);
-	var crystal3 = Math.floor(Math.random() * 12 + 1);
-	var crystal4 = Math.floor(Math.random() * 12 + 1);
+	crystal2 = Math.floor(Math.random() * 12 + 1);
+	crystal3 = Math.floor(Math.random() * 12 + 1);
+	crystal4 = Math.floor(Math.random() * 12 + 1);
 	$("#crystalValue").empty();
 	counter = 0;
 
