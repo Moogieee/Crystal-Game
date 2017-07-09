@@ -11,7 +11,7 @@ function reset () {
 	targetNumber = Math.floor(Math.random() * 102 + 19);
 	console.log("targetNumber = " + targetNumber);
  	crystal1 = Math.floor(Math.random() * 12 + 1);
-	console.log(crystal1);
+	console.log("c1 = " + crystal1);
 	crystal2 = Math.floor(Math.random() * 12 + 1);
 	crystal3 = Math.floor(Math.random() * 12 + 1);
 	crystal4 = Math.floor(Math.random() * 12 + 1);
