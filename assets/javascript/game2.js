@@ -53,7 +53,7 @@ $("#crystal1, #crystal2, #crystal3, #crystal4").addClass("crystal-image");
 
 reset();
 	
-/* commented out the following lines of code because it got moved to the reset. I created a reset function so that I can call the function when needed. This hopefully makes things less repetitive.
+/* commented out the following lines of code because it got moved to the reset function. I created a reset function so that I can call the function when needed. This hopefully makes things less repetitive.
 // give each crystal a random # from 1-12
 crystal1 = Math.floor(Math.random() * 12 + 1);
 console.log(crystal1);
