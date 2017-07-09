@@ -14,7 +14,7 @@ var crystal4 = 0;
 
 // function to reset the game
 function reset () {
-	//alert('reset');
+	alert('reset');
 	targetNumber = Math.floor(Math.random() * 102 + 19);
 	console.log("targetNumber = " + targetNumber);
  	crystal1 = Math.floor(Math.random() * 12 + 1);
