@@ -1,20 +1,22 @@
-body {
-	color: white;
+.page-header {
+	font-family: 'Pacifico', cursive;
 }
-
 .crystal-image {
 	margin-right: 10px;
 	margin-top: 10px;
 }
 
 #crystal1, #crystal2, #crystal3, #crystal4 {
-	height: 100px;
-	width: 100px;
+	max-width: 75%;
 }
 
 #crystals {
 	margin: auto;
 	max-width: 50%;
+}
+
+#totalscore {
+	margin-bottom: 50px;
 }
 #w-l-notif, #crystalValue{
 	color: red;
